@@ -14,9 +14,10 @@
             items="{Flights}">
             <ColumnListItem>
                 <cells>
-                    <Text text="{
-                        path: 'Fldate',
-                        type: 'sap.ui.model.type.Date'
+                    <Text
+                        text="{
+                            path: 'Fldate',
+                            formatter: 'com.bf.newtrial.util.Formatter.date'
                         }" />
                     <Text text="{Planetype}" />
                     <Text text="{Connid}" />
@@ -60,37 +61,43 @@
                 </cells>
             </ColumnListItem>
             <columns>
-                <Column>
+                <Column
+                    vAlign="Middle">
                     <header>
                         <Label text="Date" />
                     </header>
                 </Column>
-                <Column>
+                <Column
+                    vAlign="Middle">
                     <header>
                         <Label text="Aircraft Type" />
                     </header>
                 </Column>
-                <Column>
+                <Column
+                    vAlign="Middle">
                     <header>
                         <Label text="Connection" />
                     </header>
                 </Column>
                 <Column
                     visible="{device>/isPhone}"
-                    hAlign="End">
+                    hAlign="End"
+                    vAlign="Middle">
                     <header>
                         <Label text="Capacity (%)" />
                     </header>
                 </Column>
                 <Column
                     visible="{device>/isNotPhone}"
-                    hAlign="End">
+                    hAlign="End"
+                    vAlign="Middle">
                     <header>
                         <Label text="Capacity (Occ/Max)" />
                     </header>
                 </Column>
                 <Column
-                    hAlign="End">
+                    hAlign="End"
+                    vAlign="Middle">
                     <header>
                         <Label text="Payments ({Currcode})" />
                     </header>

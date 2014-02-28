@@ -6,9 +6,18 @@ com.bf.newtrial.util.Formatter = {
         return (iPart / iWhole) * 100;
     },
 
+    date: function (value) {
+        if (value) {
+            var oDateFormat = sap.ui.core.format.DateFormat.getDateTimeInstance({pattern: "yyyy-MM-dd"}); 
+            return oDateFormat.format(new Date(value));
+        } else {
+            return value;
+        }
+    },
+
     capacityPercent: function(iPart, iWhole) {
         try {
-            return com.bf.newtrial.util.Formatter._percent(iPart, iWhole);
+            return Math.round(com.bf.newtrial.util.Formatter._percent(iPart, iWhole));
         } catch (err) {
             return "Unknown";
         }
