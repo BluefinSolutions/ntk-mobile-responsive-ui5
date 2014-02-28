@@ -14,15 +14,60 @@
             items="{Flights}">
             <ColumnListItem>
                 <cells>
-                    <Text text="{Carrid}" />
+                    <Text text="{
+                        path: 'Fldate',
+                        type: 'sap.ui.model.type.Date'
+                        }" />
+                    <Text text="{Planetype}" />
                     <Text text="{Connid}" />
-                    <Text text="{Price}" />
+                    <ObjectNumber
+                        visible="{device>/isPhone}"
+                        number="{
+                            parts: [
+                                { path: 'Seatsocc' },
+                                { path: 'Seatsmax' }
+                            ],
+                            formatter: 'com.bf.newtrial.util.Formatter.capacityPercent'
+                        }"
+                        state="{
+                            parts: [
+                                { path: 'Seatsocc' },
+                                { path: 'Seatsmax' }
+                            ],
+                            formatter: 'com.bf.newtrial.util.Formatter.capacityState'
+                        }" />
+                    <ProgressIndicator
+                        visible="{device>/isNotPhone}"
+                        percentValue="{
+                            parts: [
+                                { path: 'Seatsocc' },
+                                { path: 'Seatsmax' }
+                            ],
+                            formatter: 'com.bf.newtrial.util.Formatter.capacityPercent'
+                        }"
+                        displayValue="{Seatsocc} / {Seatsmax}"
+                        state="{
+                            parts: [
+                                { path: 'Seatsocc' },
+                                { path: 'Seatsmax' }
+                            ],
+                            formatter: 'com.bf.newtrial.util.Formatter.capacityState'
+                        }" />
+                    <Text text="{
+                        path: 'Paymentsum',
+                        type: 'sap.ui.model.type.Float'
+                        }" />
                 </cells>
             </ColumnListItem>
             <columns>
                 <Column>
                     <header>
-                        <Label text="Carrier" />
+                        <Label text="Date" />
+                    </header>
+                </Column>
+                <Column>
+                    <header>
+                        <Label text="Aircraft Type" />
                     </header>
                 </Column>
                 <Column>
@@ -30,9 +75,24 @@
                         <Label text="Connection" />
                     </header>
                 </Column>
-                <Column>
+                <Column
+                    visible="{device>/isPhone}"
+                    hAlign="End">
                     <header>
-                        <Label text="Price" />
+                        <Label text="Capacity (%)" />
+                    </header>
+                </Column>
+                <Column
+                    visible="{device>/isNotPhone}"
+                    hAlign="End">
+                    <header>
+                        <Label text="Capacity (Occ/Max)" />
+                    </header>
+                </Column>
+                <Column
+                    hAlign="End">
+                    <header>
+                        <Label text="Payments ({Currcode})" />
                     </header>
                 </Column>
             </columns>

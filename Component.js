@@ -22,6 +22,7 @@ sap.ui.core.UIComponent.extend("com.bf.newtrial.Component", {
         // set device model for responsiveness
         var deviceModel = new sap.ui.model.json.JSONModel({
             isPhone : jQuery.device.is.phone,
+            isNotPhone : !jQuery.device.is.phone,
             listMode : (jQuery.device.is.phone) ? "None" : "SingleSelectMaster",
             listItemType : (jQuery.device.is.phone) ? "Active" : "Inactive"
         });
