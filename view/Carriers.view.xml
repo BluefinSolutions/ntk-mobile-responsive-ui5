@@ -6,16 +6,6 @@
 
     <Page
         title="Carriers">
-        <subHeader>
-            <Bar>
-                <contentLeft>
-                    <SearchField
-                        _search="handleSearch"
-                        width="100%" >
-                    </SearchField>
-                </contentLeft>
-            </Bar>
-        </subHeader>
         <List
             id="list"
             mode="{device>/listMode}"
@@ -28,6 +18,9 @@
                 title="{Carrname}"
                 info="{Carrid}" />
         </List>
+        <footer>
+            <Bar />
+        </footer>
     </Page>
 
 </mvc:View>

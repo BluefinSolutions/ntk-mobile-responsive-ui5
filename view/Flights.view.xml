@@ -108,6 +108,9 @@
                 </Column>
             </columns>
         </Table>
+        <footer>
+            <Bar />
+        </footer>
     </Page>
 
 </mvc:View>
