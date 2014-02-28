@@ -68,12 +68,16 @@
                     </header>
                 </Column>
                 <Column
+                    minScreenWidth="Tablet"
+                    demandPopin="true"
                     vAlign="Middle">
                     <header>
                         <Label text="Aircraft Type" />
                     </header>
                 </Column>
                 <Column
+                    minScreenWidth="Tablet"
+                    demandPopin="true"
                     vAlign="Middle">
                     <header>
                         <Label text="Connection" />
@@ -92,14 +96,14 @@
                     hAlign="End"
                     vAlign="Middle">
                     <header>
-                        <Label text="Capacity (Occ/Max)" />
+                        <Label text="Capacity" />
                     </header>
                 </Column>
                 <Column
                     hAlign="End"
                     vAlign="Middle">
                     <header>
-                        <Label text="Payments ({Currcode})" />
+                        <Label text="{Currcode}" />
                     </header>
                 </Column>
             </columns>

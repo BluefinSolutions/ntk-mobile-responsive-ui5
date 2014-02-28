@@ -21,26 +21,13 @@
             mode="{device>/listMode}"
             select="handleListSelect"
             items="{/Carriers}" >
-            <ObjectListItem
+            <StandardListItem
+                icon="sap-icon://flight"
                 type="{device>/listItemType}"
                 press="handleItemSelect"
                 title="{Carrname}"
-                number="{Carrid}"
-                numberUnit="USD" >
-            </ObjectListItem>
+                info="{Carrid}" />
         </List>
-<!--         <List
-            headerText="Carriers"
-            _mode="{device>/listMode}"
-            mode="SingleSelectLeft"
-            selectionChange="handleListSelect"
-            items="{/Carriers}">
-            <ObjectListItem
-                icon="sap-icon://flight"
-                title="{Carrid}!"
-                description="{Carrname}"
-                detailPress="handleItemSelect" />
-        </List>
- -->    </Page>
+    </Page>
 
 </mvc:View>
