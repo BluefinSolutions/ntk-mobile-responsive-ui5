@@ -1,15 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <mvc:View
+    displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
 
-    <IconTabBar>
-        <items>
-    <IconTabFilter
-        text="hello"
-        icon="sap-icon://group"
-        design="Vertical">
-    </IconTabFilter>
-        </items>
-</IconTabBar>
+    <Page
+        title="Welcome">
+        <Panel height="100%">
+        <FlexBox
+            alignItems="Center"
+            justifyContent="Center">
+            <items>
+                <VBox>
+                <Label width="300px" textAlign="Center" design="Bold" text="Bluefin Mobile Day" />
+                <Label width="300px" textAlign="Center" design="Bold" text="Responsive Mobile Example" />
+            </VBox>
+            </items>
+        </FlexBox>
+    </Panel>
+    </Page>
 
 </mvc:View>
