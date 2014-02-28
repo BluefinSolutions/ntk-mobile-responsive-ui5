@@ -1,0 +1,17 @@
+<mvc:View
+    displayBlock="true"
+    controllerName="com.bf.newtrial.view.Root"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <SplitApp
+        id="idRootControl">
+        <masterPages>
+            <mvc:XMLView viewName="com.bf.newtrial.view.Carriers" id="Carriers" />
+        </masterPages>
+        <detailPages>
+            <mvc:XMLView viewName="com.bf.newtrial.view.Empty" id="Empty" />
+            <mvc:XMLView viewName="com.bf.newtrial.view.Flights" id="Flights" />
+        </detailPages>
+    </SplitApp>
+</mvc:View>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="com.bf.newtrial.view.Carriers"
+    xmlns="sap.m">
+
+    <Page
+        title="Carriers">
+        <subHeader>
+            <Bar>
+                <contentLeft>
+                    <SearchField
+                        _search="handleSearch"
+                        width="100%" >
+                    </SearchField>
+                </contentLeft>
+            </Bar>
+        </subHeader>
+        <List
+            id="list"
+            mode="{device>/listMode}"
+            select="handleListSelect"
+            items="{/Carriers}" >
+            <ObjectListItem
+                type="{device>/listItemType}"
+                press="handleItemSelect"
+                title="{Carrname}"
+                number="{Carrid}"
+                numberUnit="USD" >
+            </ObjectListItem>
+        </List>
+<!--         <List
+            headerText="Carriers"
+            _mode="{device>/listMode}"
+            mode="SingleSelectLeft"
+            selectionChange="handleListSelect"
+            items="{/Carriers}">
+            <ObjectListItem
+                icon="sap-icon://flight"
+                title="{Carrid}!"
+                description="{Carrname}"
+                detailPress="handleItemSelect" />
+        </List>
+ -->    </Page>
+
+</mvc:View>

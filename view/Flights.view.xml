@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="com.bf.newtrial.view.Flights"
+    xmlns="sap.m">
+
+    <Page
+        id="idPageFlights"
+        binding="{Flights}"
+        showNavButton="{device>/isPhone}"
+        navButtonPress="handleNavButtonPress"
+        title="Flights">
+        <Table
+            items="{Flights}">
+            <ColumnListItem>
+                <cells>
+                    <Text text="{Carrid}" />
+                    <Text text="{Connid}" />
+                    <Text text="{Price}" />
+                </cells>
+            </ColumnListItem>
+            <columns>
+                <Column>
+                    <header>
+                        <Label text="Carrier" />
+                    </header>
+                </Column>
+                <Column>
+                    <header>
+                        <Label text="Connection" />
+                    </header>
+                </Column>
+                <Column>
+                    <header>
+                        <Label text="Price" />
+                    </header>
+                </Column>
+            </columns>
+        </Table>
+    </Page>
+
+</mvc:View>

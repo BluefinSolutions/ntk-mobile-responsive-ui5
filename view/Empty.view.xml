@@ -1,0 +1,15 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <IconTabBar>
+        <items>
+    <IconTabFilter
+        text="hello"
+        icon="sap-icon://group"
+        design="Vertical">
+    </IconTabFilter>
+        </items>
+</IconTabBar>
+
+</mvc:View>
