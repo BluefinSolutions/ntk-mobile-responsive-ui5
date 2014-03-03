@@ -63,7 +63,8 @@ sap.ui.core.UIComponent.extend("com.bf.newtrial.Component", {
 
         if (!sAPPCID) {
             var oSMPModel = new sap.ui.model.odata.ODataModel(
-                mServiceConfig.baseURL + "/odata/applications/latest/" + mServiceConfig.appName
+                mServiceConfig.baseURL + "/odata/applications/latest/" + mServiceConfig.appName,
+		true
             );
 
             oSMPModel.create('/Connections', { DeviceType: "Android" }, null, 
