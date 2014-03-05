@@ -18,14 +18,11 @@
         </script>
 
         <script>
-            new sap.ui.core.ComponentContainer({
-                name : "com.bf.newtrial"
+            new sap.m.Shell({
+                app: new sap.ui.core.ComponentContainer({
+                    name : "com.bf.newtrial"
+                })
             }).placeAt("content");
-
-            // sap.ui.view({
-            //     viewName: "com.bf.newtrial.view.Root",
-            //     type: sap.ui.core.mvc.ViewType.XML,
-            // }).placeAt("content");
 
         </script>
 
